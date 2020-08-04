@@ -1,3 +1,3 @@
 # EdabitChallenges
 
-There are my solutions to edabit.com challenges.
+Here are my solutions to edabit.com challenges.
