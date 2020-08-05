@@ -8,4 +8,9 @@ public class Challenges {
         return a.equals(b);
     }
 
+    // https://edabit.com/challenge/LJh54oryEc3tkagzD
+    public static String correctSpacing(String sentence) {
+        return sentence.trim().replaceAll("\\s+", " ");
+    }
+
 }
