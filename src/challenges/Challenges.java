@@ -56,7 +56,14 @@ public class Challenges {
 
     // https://edabit.com/challenge/YNQQynxnFeoKNiqTM
     public static String removeSpecialCharacters(String s) {
-        return s.replaceAll("[^\\w\\d- ]","");
+        return s.replaceAll("[^\\w\\s- ]","");
     }
+
+
+    // https://edabit.com/challenge/bL2E8p5DGWSNmEtAE
+    public static boolean validatePIN(String s) {
+        return s.matches("(\\d{6})|(\\d{4})");
+    }
+
 
 }
