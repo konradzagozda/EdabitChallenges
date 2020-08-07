@@ -65,5 +65,25 @@ public class Challenges {
         return s.matches("(\\d{6})|(\\d{4})");
     }
 
+    // https://edabit.com/challenge/D7PZ7rcKGRiCvcm7C
+    public static boolean canAlternate(String str) {
+        int zeros = 0;
+        int ones = 0;
+        for (int i = 0; i<str.length() ; i++){
+            if(str.charAt(i) == '1'){
+                ones++;
+            } else if(str.charAt(i) == '0'){
+                zeros++;
+            }
+        }
+        if (zeros == 0 || ones == 0) {
+            return false;
+        }
+        if ((int)Math.abs(zeros - ones) <= 1) {
+            return true;
+        }
+        return false;
+    }
+
 
 }
