@@ -54,4 +54,9 @@ public class Challenges {
         return stream.map(x -> x.substring(0,1)).sorted().collect(Collectors.joining());
     }
 
+    // https://edabit.com/challenge/YNQQynxnFeoKNiqTM
+    public static String removeSpecialCharacters(String s) {
+        return s.replaceAll("[^\\w\\d- ]","");
+    }
+
 }
