@@ -1,5 +1,9 @@
 package challenges;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Challenges {
     // https://edabit.com/challenge/ocqRdAXXniLS4ea3h
     public static boolean checkEquality(Object a, Object b) {
@@ -28,6 +32,26 @@ public class Challenges {
         }
         if (digits == 0) return 0;
         return sum / digits;
+    }
+
+
+    // https://edabit.com/challenge/s8RHRY9hfmvYMuaeC
+    public static int[] hashPlusCount(String s) {
+        int[] out = {0,0}; // hash, plus
+        for(int i = 0 ; i<s.length(); i++){
+            if(s.charAt(i) == '#'){
+                out[0]++;
+            } else if(s.charAt(i) == '+'){
+                out[1]++;
+            }
+        }
+        return out;
+    }
+
+    // https://edabit.com/challenge/zr7BBJbeYikNBN2hf
+    public static String societyName(String[] friends) {
+        Stream<String> stream = Arrays.stream(friends);
+        return stream.map(x -> x.substring(0,1)).sorted().collect(Collectors.joining());
     }
 
 }
