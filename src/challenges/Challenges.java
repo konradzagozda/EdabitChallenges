@@ -98,5 +98,16 @@ public class Challenges {
         return true;
     }
 
+    // https://edabit.com/challenge/Jr7ueGQMEthBFYpB6
+    public static boolean largestSwap(int num) {
+        int digit1 = num % 10;
+        int digit2 = num / 10 % 10;
+        if (digit1 == digit2) {
+            return true;
+        }
+        return digit1 < digit2;
+
+    }
+
 
 }
