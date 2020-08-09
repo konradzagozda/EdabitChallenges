@@ -151,4 +151,18 @@ public class Challenges {
         return true;
     }
 
+    // https://edabit.com/challenge/MsJzAHPmmmcwF4iCr
+    private static boolean isVowel(String str){
+        return str.toLowerCase().matches("[aeiou]");
+    }
+
+    public static int firstVowel(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (isVowel(String.valueOf(str.charAt(i)))){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }
