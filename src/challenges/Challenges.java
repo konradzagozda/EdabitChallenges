@@ -106,7 +106,20 @@ public class Challenges {
             return true;
         }
         return digit1 < digit2;
+    }
 
+
+    // https://edabit.com/challenge/EiGazR6eGXHMx3hTy
+    public static String stripSentence(String str, String chars) {
+
+        for (int i = 0; i < chars.length(); i++) {
+            String pattern = String.valueOf(chars.charAt(i));
+            if (pattern.equals("?")){
+                pattern = "\\?";
+            }
+            str = str.replaceAll(pattern, "");
+        }
+        return str;
     }
 
 
