@@ -129,4 +129,16 @@ public class Challenges {
         return fib(n-1) + fib(n-2);
     }
 
+
+    // https://edabit.com/challenge/FQPo8iZ8vuPEj2dKB
+    public static int halveCount(int a, int b) {
+        double a2 = (double) a;
+        int howMany = 0;
+        while (a2 > b){
+            a2 /= 2;
+            howMany++;
+        }
+        return howMany -1;
+    }
+
 }
