@@ -122,5 +122,11 @@ public class Challenges {
         return str;
     }
 
+    // https://edabit.com/challenge/H5Tabm7omS9ia8Rce
+    public static int fib(int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        return fib(n-1) + fib(n-2);
+    }
 
 }
