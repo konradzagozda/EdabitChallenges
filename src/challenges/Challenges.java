@@ -141,4 +141,14 @@ public class Challenges {
         return howMany -1;
     }
 
+    // https://edabit.com/challenge/SvptD77rYQJgjDvZY
+    public static boolean factorChain(int[] arr) {
+        for (int i = arr.length-1; i > 0; i--) {
+            if (arr[i] % arr[i-1] != 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
