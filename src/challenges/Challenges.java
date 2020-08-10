@@ -165,4 +165,17 @@ public class Challenges {
         return -1;
     }
 
+    public static String capToFront(String str) {
+        String outCaps = "";
+        String outNoCaps = "";
+        for(int i = 0; i<str.length() ;i++){
+            if(String.valueOf(str.charAt(i)).matches("[A-Z]")){
+                outCaps += str.charAt(i);
+            } else {
+                outNoCaps += str.charAt(i);
+            }
+        }
+        return outCaps + outNoCaps;
+    }
+
 }
