@@ -178,4 +178,8 @@ public class Challenges {
         return outCaps + outNoCaps;
     }
 
+    public static int footballPoints(int wins, int draws, int loses) {
+        return wins * 3 + draws;
+    }
+
 }
