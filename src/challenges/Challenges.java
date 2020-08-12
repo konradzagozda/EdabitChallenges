@@ -37,11 +37,11 @@ public class Challenges {
 
     // https://edabit.com/challenge/s8RHRY9hfmvYMuaeC
     public static int[] hashPlusCount(String s) {
-        int[] out = {0,0}; // hash, plus
-        for(int i = 0 ; i<s.length(); i++){
-            if(s.charAt(i) == '#'){
+        int[] out = {0, 0}; // hash, plus
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '#') {
                 out[0]++;
-            } else if(s.charAt(i) == '+'){
+            } else if (s.charAt(i) == '+') {
                 out[1]++;
             }
         }
@@ -51,12 +51,12 @@ public class Challenges {
     // https://edabit.com/challenge/zr7BBJbeYikNBN2hf
     public static String societyName(String[] friends) {
         Stream<String> stream = Arrays.stream(friends);
-        return stream.map(x -> x.substring(0,1)).sorted().collect(Collectors.joining());
+        return stream.map(x -> x.substring(0, 1)).sorted().collect(Collectors.joining());
     }
 
     // https://edabit.com/challenge/YNQQynxnFeoKNiqTM
     public static String removeSpecialCharacters(String s) {
-        return s.replaceAll("[^\\w\\s- ]","");
+        return s.replaceAll("[^\\w\\s- ]", "");
     }
 
 
@@ -69,17 +69,17 @@ public class Challenges {
     public static boolean canAlternate(String str) {
         int zeros = 0;
         int ones = 0;
-        for (int i = 0; i<str.length() ; i++){
-            if(str.charAt(i) == '1'){
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '1') {
                 ones++;
-            } else if(str.charAt(i) == '0'){
+            } else if (str.charAt(i) == '0') {
                 zeros++;
             }
         }
         if (zeros == 0 || ones == 0) {
             return false;
         }
-        if ((int)Math.abs(zeros - ones) <= 1) {
+        if ((int) Math.abs(zeros - ones) <= 1) {
             return true;
         }
         return false;
@@ -87,10 +87,10 @@ public class Challenges {
 
     // https://edabit.com/challenge/ePj2zup56kZrRbhDX
     public static boolean isPrime(int num) {
-        if (num == 1){
+        if (num == 1) {
             return false;
         }
-        for (int i = 2 ; i<num; i++){
+        for (int i = 2; i < num; i++) {
             if (num % i == 0) {
                 return false;
             }
@@ -114,7 +114,7 @@ public class Challenges {
 
         for (int i = 0; i < chars.length(); i++) {
             String pattern = String.valueOf(chars.charAt(i));
-            if (pattern.equals("?")){
+            if (pattern.equals("?")) {
                 pattern = "\\?";
             }
             str = str.replaceAll(pattern, "");
@@ -126,7 +126,7 @@ public class Challenges {
     public static int fib(int n) {
         if (n == 0) return 0;
         if (n == 1) return 1;
-        return fib(n-1) + fib(n-2);
+        return fib(n - 1) + fib(n - 2);
     }
 
 
@@ -134,17 +134,17 @@ public class Challenges {
     public static int halveCount(int a, int b) {
         double a2 = (double) a;
         int howMany = 0;
-        while (a2 > b){
+        while (a2 > b) {
             a2 /= 2;
             howMany++;
         }
-        return howMany -1;
+        return howMany - 1;
     }
 
     // https://edabit.com/challenge/SvptD77rYQJgjDvZY
     public static boolean factorChain(int[] arr) {
-        for (int i = arr.length-1; i > 0; i--) {
-            if (arr[i] % arr[i-1] != 0){
+        for (int i = arr.length - 1; i > 0; i--) {
+            if (arr[i] % arr[i - 1] != 0) {
                 return false;
             }
         }
@@ -152,13 +152,13 @@ public class Challenges {
     }
 
     // https://edabit.com/challenge/MsJzAHPmmmcwF4iCr
-    private static boolean isVowel(String str){
+    private static boolean isVowel(String str) {
         return str.toLowerCase().matches("[aeiou]");
     }
 
     public static int firstVowel(String str) {
         for (int i = 0; i < str.length(); i++) {
-            if (isVowel(String.valueOf(str.charAt(i)))){
+            if (isVowel(String.valueOf(str.charAt(i)))) {
                 return i;
             }
         }
@@ -168,8 +168,8 @@ public class Challenges {
     public static String capToFront(String str) {
         String outCaps = "";
         String outNoCaps = "";
-        for(int i = 0; i<str.length() ;i++){
-            if(String.valueOf(str.charAt(i)).matches("[A-Z]")){
+        for (int i = 0; i < str.length(); i++) {
+            if (String.valueOf(str.charAt(i)).matches("[A-Z]")) {
                 outCaps += str.charAt(i);
             } else {
                 outNoCaps += str.charAt(i);
@@ -180,6 +180,15 @@ public class Challenges {
 
     public static int footballPoints(int wins, int draws, int loses) {
         return wins * 3 + draws;
+    }
+
+    // https://edabit.com/challenge/pKmR5HRabYPkdGunz
+    public static String[] capMe(String[] s) {
+        String[] out = new String[s.length];
+        for (int i = 0; i < s.length; i++) {
+            out[i] = s[i].substring(0,1).toUpperCase() + s[i].substring(1).toLowerCase();
+        }
+        return out;
     }
 
 }
