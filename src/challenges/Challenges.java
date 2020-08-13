@@ -198,4 +198,14 @@ public class Challenges {
         return str;
     }
 
+
+    //https://edabit.com/challenge/mkxS3CnW98Ci3kwCh
+    public static String makeTitle(String s) {
+        String[] arr = s.split(" ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = String.valueOf(arr[i].charAt(0)).toUpperCase() + arr[i].substring(1);
+        }
+        return String.join(" ", arr);
+    }
+
 }
