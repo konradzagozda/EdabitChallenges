@@ -191,4 +191,11 @@ public class Challenges {
         return out;
     }
 
+    //https://edabit.com/challenge/jwzMsyo2tbgn2KbGQ
+
+    public static String convertBinary(String str) {
+        str = str.toLowerCase().replaceAll("[a-m]", "0").replaceAll("[n-z]", "1");
+        return str;
+    }
+
 }
