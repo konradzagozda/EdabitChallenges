@@ -208,4 +208,13 @@ public class Challenges {
         return String.join(" ", arr);
     }
 
+    //https://edabit.com/challenge/jwXx478haGbZpRCWQ
+    public static int[] findEvenNums(int num) {
+        int[] out = new int[num/2];
+        for (int i = 2; i <= num; i+=2) {
+            out[i/2-1] = i;
+        }
+        return out;
+    }
+
 }
